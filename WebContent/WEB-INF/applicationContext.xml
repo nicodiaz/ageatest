@@ -10,6 +10,16 @@
 			 http://www.springframework.org/schema/tx
 			 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:database.properties</value>
+			</list>
+		</property>
+	</bean>
+
+
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<bean id="transactionManager"
@@ -19,10 +29,10 @@
 
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/agea_test" />
-		<property name="username" value="agea" />
-		<property name="password" value="agea" />
+		<property name="driverClassName" value="${hibernate.connection.driver_class}" />
+		<property name="url" value="${hibernate.connection.url}" />
+		<property name="username" value="${hibernate.connection.username}" />
+		<property name="password" value="${hibernate.connection.password}" />
 	</bean>
 
 
@@ -31,13 +41,13 @@
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
-		
+
 		<property name="annotatedClasses">
 			<list>
 				<value>main.java.ar.com.nicodp.ageatest.model.TSistema</value>
 			</list>
 		</property>
-		
+
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>

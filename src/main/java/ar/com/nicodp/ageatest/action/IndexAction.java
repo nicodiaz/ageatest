@@ -5,8 +5,6 @@ import java.util.List;
 import main.java.ar.com.nicodp.ageatest.bean.System;
 import main.java.ar.com.nicodp.ageatest.service.SystemService;
 
-import org.apache.log4j.Logger;
-
 import com.opensymphony.xwork2.ActionSupport;
 
 public class IndexAction extends ActionSupport {
@@ -22,10 +20,6 @@ public class IndexAction extends ActionSupport {
 
 	@Override
 	public String execute() throws Exception {
-
-		// System selected = systemService.get(2);
-		//
-		// logger.error(selected.getDescription());
 
 		setSystems(systemService.getAll());
 
