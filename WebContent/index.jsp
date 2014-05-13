@@ -6,6 +6,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>AGEA Test</title>
+	
+	<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css" />
+	
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/js/init.js"></script>
 </head>
@@ -20,8 +23,12 @@
 			<s:select
 				id="systemselect"
 				label="Sistema"
-				headerKey="0" headerValue="-- Seleccionar --" 
-			list="systems.{name}"></s:select>
+				headerKey="0" headerValue="-- Seleccionar --"
+				listKey="id"
+				listValue="name"
+			list="systems"
+			
+			></s:select>
 	</s:form>
 	
 	<s:textarea id="info"></s:textarea>

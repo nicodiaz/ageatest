@@ -15,12 +15,19 @@ public class XMLAction extends ActionSupport {
 	private SystemService systemService;
 
 	private System selected;
+	
+	private int requestSystemId;
 
 	@Override
 	public String execute() throws Exception {
 
-		// FIXME: Get the param from request
-		selected = systemService.get(2);
+		/*
+		 * An alternative could be use the getXML method on SystemService. 
+		 * 
+		 * String output = systemService.getXML(systemService.get(requestSystemId));
+		 * 
+		 */
+		selected = systemService.get(requestSystemId);
 		
 		return SUCCESS;
 	}
@@ -35,6 +42,14 @@ public class XMLAction extends ActionSupport {
 
 	public void setSelected(System selected) {
 		this.selected = selected;
+	}
+
+	public int getRequestSystemId() {
+		return requestSystemId;
+	}
+
+	public void setRequestSystemId(int requestSystemId) {
+		this.requestSystemId = requestSystemId;
 	}
 
 
