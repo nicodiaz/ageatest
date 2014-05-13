@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+
+#info {
+    height: 227px;
+    width: 538px;
+}
+
+body {
+    background-color: #DEDEDE;
+}
+
+.container {
+    margin-top: 30px;
+}
