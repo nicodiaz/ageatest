@@ -35,6 +35,13 @@ public class SystemService implements Service {
 	 */
 	@Override
 	public String getXML(System system) {
+		
+		// Preconditions
+		if (system == null)
+		{
+			throw new IllegalArgumentException("Intento de Conversion de XML con objeto nulo");
+		}
+		
 		String result = "<?xml version='1.0' encoding='UTF-8'?>"
 						+ "<system>" 
 						+		"<id>"+system.getId()+"</id>"
@@ -63,7 +70,7 @@ public class SystemService implements Service {
 	 */
 	protected System getSystemById(int id)
 	{
-		if (id < 0) {
+		if (id <= 0) {
 			logger.error("Intento de recupero de sistema con id nulo");
 			return null;
 		}
