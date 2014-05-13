@@ -7,13 +7,17 @@
 
 	<constant name="struts.devMode" value="true" />
 
+	<constant name="struts.custom.i18n.resources" value="global" />
+
 	<package name="com.ar.nicodp.ageatest" extends="struts-default">
 
-		<action name="index" class="main.java.ar.com.nicodp.ageatest.action.IndexAction">
+		<action name="index"
+			class="main.java.ar.com.nicodp.ageatest.action.IndexAction">
 			<result>/index.jsp</result>
 		</action>
-		
-		<action name="xml" class="main.java.ar.com.nicodp.ageatest.action.XMLAction">
+
+		<action name="xml"
+			class="main.java.ar.com.nicodp.ageatest.action.XMLAction">
 			<result>/xml.jsp</result>
 		</action>
 
