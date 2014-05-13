@@ -7,7 +7,7 @@ $(function() {
 
 	$('#systemselect').change(function() {
 
-		$.get("/agea_test/index.action", function(data) {
+		$.get("/agea_test/xml.action", function(data) {
 			$("#info").val(data);
 		});
 	});

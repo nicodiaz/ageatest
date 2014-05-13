@@ -31,7 +31,7 @@ public class SystemService implements Service {
 
 	@Override
 	public String getXML(System system) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
