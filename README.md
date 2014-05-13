@@ -18,10 +18,12 @@ Instalacion
 
 - BUILD
 
+```shell
 $ cd /path/al/workspace
 $ git clone https://github.com/nicodiaz/ageatest.git
 $ de ageatest
 $ mvn clean install
+```
 
 - DB / MySQL
 
