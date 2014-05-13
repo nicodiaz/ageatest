@@ -12,6 +12,10 @@
 		<action name="index" class="main.java.ar.com.nicodp.ageatest.action.IndexAction">
 			<result>/index.jsp</result>
 		</action>
+		
+		<action name="xml" class="main.java.ar.com.nicodp.ageatest.action.XMLAction">
+			<result>/xml.jsp</result>
+		</action>
 
 	</package>
 

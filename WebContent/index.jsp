@@ -6,6 +6,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>AGEA Test</title>
+	
+	<link href="${pageContext.request.contextPath}/css/main.css" rel="stylesheet" type="text/css" />
+	
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/js/init.js"></script>
 </head>
 <body>
 
@@ -13,13 +18,22 @@
 	
 	<h2>Bienvenido!</h2>
 
-	<s:form>
-		<s:combobox headerKey="0" headerValue="--- Seleccionar ---"
-			list="systems.{name}" 
-			name="s" />	
+	<s:form theme="simple">
+			
+			<s:select
+				id="systemselect"
+				label="Sistema"
+				headerKey="0" headerValue="-- Seleccionar --"
+				listKey="id"
+				listValue="name"
+			list="systems"
+			
+			></s:select>
 	</s:form>
-
 	
+	<s:textarea id="info"></s:textarea>
+	
+
 
 </body>
 </html>

@@ -29,10 +29,20 @@ public class SystemService implements Service {
 		return result; 
 	}
 
+	
+	/**
+	 * Build an XML string containing the system information
+	 */
 	@Override
 	public String getXML(System system) {
-		// TODO Auto-generated method stub
-		return null;
+		String result = "<?xml version='1.0' encoding='UTF-8'?>"
+						+ "<system>" 
+						+		"<id>"+system.getId()+"</id>"
+						+ 		"<name>"+system.getName()+"</name>"
+						+ 		"<description>"+system.getDescription()+"</description>"
+						+ "</system>";
+		
+		return result;
 	}
 
 	@Override
