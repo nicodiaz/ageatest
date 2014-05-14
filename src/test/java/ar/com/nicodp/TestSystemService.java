@@ -15,6 +15,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+/** 
+ * Main Test Case
+ * 
+ * @author  Nicolás Díaz País <nico@diazpais.com.ar>
+ * @package test.java.ar.com.nicodp
+ * @license https://raw.githubusercontent.com/nicodiaz/ageatest/master/LICENSE
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="/applicationContextTest.xml")  
 public class TestSystemService {

@@ -11,27 +11,33 @@ Tools / Environment
 - Maven 3.0.4 
 - Hibernate 4.2
 - JDK 1.7
-- MySQL Server 5.5 
+- MySQL Server 5.5
+- Apache Tomcat/7.0
+ 
 
 Instalacion
 -----------
+
+- DB / MySQL
+
+Crear la base de datos 'agea_test' en MySql y luego ejecutar el script que se encuentra en la carpeta /doc/sql/agea_test.sql
+Los datos de conexion se encuentran en el archivo hibernate.properties (user: 'agea', pass: 'agea') 
 
 - BUILD
 
 ```shell
 $ cd /path/al/workspace
 $ git clone https://github.com/nicodiaz/ageatest.git
-$ de ageatest
+$ cd ageatest
 $ mvn clean install
 ```
 
-- DB / MySQL
+Una vez finalizado de forma exitosa (BUILD SUCCESS), el war se encuentra en la carpeta /target listo para hacer el deploy en Tomcat. 
 
-Crear la base de datos (por ejemplo, 'agea_test') en MySql y luego ejecutar el script que se encuentra en la carpeta /doc/sql/agea_test.sql
+- Testing
 
-Los parametros de conexion de la base de datos con el sistema se encuentran en: /src/main/resources/database.properties
-
-
+Se encuentran en la carpeta test/ y se pueden ejecutar mediante
+$ mvn test
 
 
 
