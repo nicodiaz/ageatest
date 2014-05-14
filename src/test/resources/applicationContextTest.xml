@@ -14,7 +14,7 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath:database.properties</value>
+				<value>classpath:hibernate.properties</value>
 			</list>
 		</property>
 	</bean>
@@ -68,7 +68,7 @@
 		<property name="systemDAO" ref="systemDAO"></property>
 	</bean>
 
-	<bean id="indexAction" class="main.java.ar.com.nicodp.ageatest.action.IndexAction">
+	<bean id="systemsAction" class="main.java.ar.com.nicodp.ageatest.action.SystemsAction">
 		<property name="systemService" ref="systemService"></property>
 	</bean>
 

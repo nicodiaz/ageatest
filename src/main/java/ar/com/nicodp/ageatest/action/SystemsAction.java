@@ -7,7 +7,7 @@ import main.java.ar.com.nicodp.ageatest.service.SystemService;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class IndexAction extends ActionSupport {
+public class SystemsAction extends ActionSupport {
 
 	/**
 	 * 
