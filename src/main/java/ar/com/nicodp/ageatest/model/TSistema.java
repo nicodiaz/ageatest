@@ -9,8 +9,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * TSistema Database Model
+/** 
+ * Database Table Class Map 
+ * 
+ * @author  Nicolás Díaz País <nico@diazpais.com.ar>
+ * @package main.java.ar.com.nicodp.ageatest.model
+ * @license https://raw.githubusercontent.com/nicodiaz/ageatest/master/LICENSE
  */
 @Entity
 @Table(name = "T_SISTEMA", catalog = "agea_test")

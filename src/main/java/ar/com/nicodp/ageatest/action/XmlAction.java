@@ -5,6 +5,16 @@ import main.java.ar.com.nicodp.ageatest.service.SystemService;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+
+/** 
+ * Action to retrieve the XML from specific system
+ * 
+ * @param GET requestedSystemId
+ * 
+ * @author  Nicolás Díaz País <nico@diazpais.com.ar>
+ * @package main.java.ar.com.nicodp.ageatest.action
+ * @license https://raw.githubusercontent.com/nicodiaz/ageatest/master/LICENSE
+ */
 public class XmlAction extends ActionSupport {
 
 	/**

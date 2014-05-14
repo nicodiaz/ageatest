@@ -9,6 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+/** 
+ * Service DAO Implementation 
+ * 
+ * Access the data integrated with hibernate
+ * 
+ * @author  Nicolás Díaz País <nico@diazpais.com.ar>
+ * @package main.java.ar.com.nicodp.ageatest.dao
+ * @license https://raw.githubusercontent.com/nicodiaz/ageatest/master/LICENSE
+ */
 @Transactional
 @Repository
 public class SystemDAO {

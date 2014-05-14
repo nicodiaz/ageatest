@@ -9,12 +9,27 @@ import main.java.ar.com.nicodp.ageatest.bean.System;
 
 import org.apache.log4j.Logger;
 
+
+/** 
+ * Service Implementation 
+ * 
+ * Contains methods to retrieve and work with the system beans from the database
+ * 
+ * @author  Nicolás Díaz País <nico@diazpais.com.ar>
+ * @package main.java.ar.com.nicodp.ageatest.service
+ * @license https://raw.githubusercontent.com/nicodiaz/ageatest/master/LICENSE
+ */
 public class SystemService implements Service {
 
 	private static final Logger logger = Logger.getLogger(SystemService.class);
 
 	private SystemDAO systemDAO;
 
+	/**
+	 * Retrieve every row from the database system table
+	 * 
+	 * @return List<System>
+	 */
 	@Override
 	public List<System> getAll() {
 		List<System> result = new ArrayList<System>();
@@ -32,6 +47,8 @@ public class SystemService implements Service {
 	
 	/**
 	 * Build an XML string containing the system information
+	 * 
+	 * @return String
 	 */
 	@Override
 	public String getXML(System system) {
@@ -52,6 +69,11 @@ public class SystemService implements Service {
 		return result;
 	}
 
+	/**
+	 * Retrieve a single system row indexed by Id
+	 * 
+	 * @return System
+	 */
 	@Override
 	public System get(int id) {
 		return getSystemById(id);
@@ -65,6 +87,7 @@ public class SystemService implements Service {
 	/**
 	 * Get the system by id
 	 * 
+	 * @internal
 	 * @param id
 	 * @return
 	 */
