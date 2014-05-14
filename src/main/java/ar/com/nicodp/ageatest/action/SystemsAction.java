@@ -7,7 +7,14 @@ import main.java.ar.com.nicodp.ageatest.service.SystemService;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class IndexAction extends ActionSupport {
+/** 
+ * Main Action 
+ * 
+ * @author  Nicolás Díaz País <nico@diazpais.com.ar>
+ * @package main.java.ar.com.nicodp.ageatest.action
+ * @license https://raw.githubusercontent.com/nicodiaz/ageatest/master/LICENSE
+ */
+public class SystemsAction extends ActionSupport {
 
 	/**
 	 * 

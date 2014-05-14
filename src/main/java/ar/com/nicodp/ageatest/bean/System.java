@@ -2,6 +2,13 @@ package main.java.ar.com.nicodp.ageatest.bean;
 
 import java.io.Serializable;
 
+/** 
+ * System BEAN 
+ * 
+ * @author  Nicolás Díaz País <nico@diazpais.com.ar>
+ * @package main.java.ar.com.nicodp.ageatest.bean
+ * @license https://raw.githubusercontent.com/nicodiaz/ageatest/master/LICENSE
+ */
 public class System implements Serializable{
 	
 	/**
